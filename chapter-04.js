@@ -42,7 +42,7 @@ function arrayToList(array) {
     for (var i = array.length - 1; i >=0; i--) {
         list = {value: array[i], rest: list};
     }
-    return list
+    return list;
 }
 
 function listToArray(list) {
@@ -54,7 +54,7 @@ function listToArray(list) {
 }
 
 function prepend(value, list) {
-    return {value: value, rest: list}
+    return {value: value, rest: list};
 }
 
 function nth(list, n) {
@@ -78,7 +78,7 @@ function deepEqual(a, b) {
     if (!isObject(a) || !isObject(b)) {
         return false;
     }
-    // check that `a` properties have a "deep equal" twin in `b`
+    // check that `a` properties have a 'deep equal' twin in `b`
     for (var prop in a) {
         if (!deepEqual(a[prop], b[prop])) {
             return false;
