@@ -19,6 +19,9 @@ function sum(array) {
     return sum;
 }
 
+console.log(sum(range(1, 10)));
+console.log(range(5, 2, -1));
+
 // 4.2 Reversing an array
 function reverseArray(array) {
     var result = [];
@@ -35,6 +38,11 @@ function reverseArrayInPlace(array) {
         array[right] = tmp;
     }
 }
+
+console.log(reverseArray(['A', 'B', 'C']));
+var arrayValue = [1, 2, 3, 4, 5];
+reverseArrayInPlace(arrayValue);
+console.log(arrayValue);
 
 // 4.3 A list
 function arrayToList(array) {
@@ -66,6 +74,11 @@ function nth(list, n) {
     }
 }
 
+console.log(arrayToList([10, 20]));
+console.log(listToArray(arrayToList([10, 20, 30])));
+console.log(prepend(10, prepend(20, null)));
+console.log(nth(arrayToList([10, 20, 30]), 1));
+
 // 4.4 Deep comparison
 function isObject(obj) {
     return obj !== null && typeof obj === 'object';
@@ -92,3 +105,8 @@ function deepEqual(a, b) {
     }
     return true;
 }
+
+var obj = {here: {is: 'an'}, object: 2};
+console.log(deepEqual(obj, obj));
+console.log(deepEqual(obj, {here: 1, object: 2}));
+console.log(deepEqual(obj, {here: {is: 'an'}, object: 2}));
